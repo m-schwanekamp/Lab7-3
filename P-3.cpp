@@ -8,25 +8,63 @@ int last_digit(int n);
 int digits(int n);
 
 int main() {
-    int first_digit = 0;
+    int firstdigit = 0;
     int numN = 0;
-    int last_digit = 0;
-    
+    int lastdigit = 0;
+    int i;
+
+
     cout << "Enter number or Q to quit: ";
     int n;
     cin >> n;
     cout << endl;
-    if (cin >> n) {
-        numN++;
-        if (numN == 1) {
-            first_digit = n;
-        }
-        last_digit = n % 10;
-   }
-   else if (cin.fail()) return 0;
-   
-    cout << "First digit: " << first_digit;
-    cout << " Last digit: " << last_digit;
-    cout << " Number of digits: " << numN;
+
+
+
+    cout << "First digit: " << first_digit(n);
+    cout << " Last digit: " << last_digit(n);
+    cout << " Number of digits: " << digits(n);
+
     cout << endl;
+}
+int first_digit(int n) {
+    //int firstdigit = 0;
+    //int n;
+
+    while (n > 0) {
+
+
+        n /= 10;
+        //cout << n << endl;
+    }
+
+    return n;
+}
+int last_digit(int n) {
+    int firstdigit = 0;
+    int numN = 0;
+    int lastdigit = 0;
+    int i;
+    int n;
+
+    lastdigit = n % 10;
+
+    return lastdigit;
+}
+
+int digits(int n) {
+    int firstdigit = 0;
+    int numN = 0;
+    int lastdigit = 0;
+    int i;
+    int n;
+    while (n > 0) {
+        firstdigit = n % 10;
+        i = n % 10;
+        numN++;
+        n /= 10;
+        //cout << i << endl;
+    }
+
+    return numN;
 }
