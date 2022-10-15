@@ -12,10 +12,10 @@ int main() {
     int numN = 0;
     int lastdigit = 0;
     int i;
-
+    int n;
+    
 
     cout << "Enter number or Q to quit: ";
-    int n;
     cin >> n;
     cout << endl;
 
@@ -28,14 +28,13 @@ int main() {
     cout << endl;
 }
 int first_digit(int n) {
-    //int firstdigit = 0;
-    //int n;
+    int firstdigit = 0;
 
-    while (n > 0) {
+    while (n >= 9) {
 
 
         n /= 10;
-        //cout << n << endl;
+       
     }
 
     return n;
@@ -45,7 +44,6 @@ int last_digit(int n) {
     int numN = 0;
     int lastdigit = 0;
     int i;
-    int n;
 
     lastdigit = n % 10;
 
@@ -57,13 +55,12 @@ int digits(int n) {
     int numN = 0;
     int lastdigit = 0;
     int i;
-    int n;
     while (n > 0) {
         firstdigit = n % 10;
         i = n % 10;
         numN++;
         n /= 10;
-        //cout << i << endl;
+    
     }
 
     return numN;
